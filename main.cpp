@@ -7,7 +7,7 @@ int main() {
     sf::CircleShape shape(200.f);
     shape.setFillColor(sf::Color::Green);
     Clock clock1;
-    Tank::Tank()
+
 
 
     while (window.isOpen())
