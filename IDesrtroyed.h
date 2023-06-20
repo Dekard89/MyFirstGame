@@ -10,7 +10,7 @@ class IDesrtroyed {
 };
 
 class ITakeDamage{
-    float TakeDamage(float armor,float damage){
+    virtual float TakeDamage(float armor,float damage){
         return armor-damage;
 
     }

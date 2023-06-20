@@ -15,7 +15,7 @@ private:
     std::string name;
     std::string path="Tanks/hardTank.png";
 public:
-    HardTank(std::string name) : Tank(x, y,dir, h,w, image, armor){
+    HardTank(std::string name,float x,float y) : Tank(x, y,dir, h,w, image, armor){
         speed*=factorOfSpeed;
         armor*=factorOfArmor;
         image.loadFromFile(path);
@@ -38,7 +38,7 @@ private:
     std::string name;
     std::string path = "Tanks/semihardTank.png";
 public:
-    SemihardTank(std::string name) : Tank(x, y, dir,h, w,image,armor){
+    SemihardTank(std::string name,float x,float y) : Tank(x, y, dir,h, w,image,armor){
         speed*=factorOfSpeed;
         armor*=factorOfArmor;
         image.loadFromFile(path);
@@ -59,7 +59,7 @@ private:
     std::string name;
     std::string path = "Tanks/mediumTank.png";
 public:
-    MediumTank(std::string name) : Tank(x, y, dir,h, w,image,armor){
+    MediumTank(std::string name,float x,float y) : Tank(x, y, dir,h, w,image,armor){
         speed*=factorOfSpeed;
         armor*=factorOfArmor;
         image.loadFromFile(path);
@@ -79,7 +79,7 @@ private:
     std::string name;
     std::string path = "Tanks/lightTank.png";
 public:
-    LightTank(std::string name) : Tank(x, y, dir,h, w,image,armor){
+    LightTank(std::string name,float x,float y) : Tank(x, y, dir,h, w,image,armor){
         speed*=factorOfSpeed;
         armor*=factorOfArmor;
         image.loadFromFile(path);

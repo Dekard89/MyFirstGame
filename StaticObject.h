@@ -11,14 +11,28 @@ public:
     float y;
     float h;
     float w;
-    bool life= true;
+    std::string path;
+    bool life = true;
     Image image;
     Texture texture;
     Sprite sprite;
-    FloatRect getRect(){
-        return FloatRect (x,y,w,h);
+
+    FloatRect getRect() {
+        return FloatRect(x, y, w, h);
+
+    }
+    StaticObject(float x,float y,float h,float w,Image &image) {
+        this->x=x;
+        this->y=y;
+        this->h=h;
+        this->w=w;
+        image.loadFromFile(path);
+        texture.loadFromImage(image);
+        sprite.setTexture(texture);
+
+
+    }
+
 
 };
-
-
 #endif //TEST1_STATICOBJECT_H

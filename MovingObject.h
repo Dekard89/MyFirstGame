@@ -34,7 +34,7 @@ Sprite sprite;
 
     }
 
-    void Update(float time) {
+    virtual void Update(float time) {
         switch (dir) {
             case 0:
                 bustX=0;

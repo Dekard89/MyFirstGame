@@ -6,6 +6,7 @@
 #include "MovingObject.h"
 #include "IDesrtroyed.h"
 #include <string>
+#include "Mine.h"
 
 
 class Tank : public MovingObject,IDesrtroyed,ITakeDamage{
@@ -54,6 +55,7 @@ public:
     }
     void Shoot(){
         if(ammo>0){
+            ammo--;
 
             Projectile projectile1(GetProjX(),GetProjY(), this->dir);
         }
@@ -91,6 +93,9 @@ public:
     std::string ShowStats(){
 
         return "Armor- "+ std::to_string(armor)+"Speed- "+ std::to_string(speed)+"Ammo- "+ std::to_string(ammo);
+    }
+    float TakeDamage(float armor, float damage) override{
+        if (this->getRect().intersects(Mine.getReact))
     }
 
 
