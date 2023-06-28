@@ -1,16 +1,18 @@
 
 #ifndef TEST1_IDESRTROYED_H
 #define TEST1_IDESRTROYED_H
-#include "Projectile.h"
-#include "Tank.h"
+#include "MO/Projectile.h"
+#include "MO/Tank.h"
 
 class IDesrtroyed {
+public:
    virtual void Desroyed()=0;
 
 };
 
 class ITakeDamage{
-    virtual float TakeDamage(float armor,float damage){
+public:
+    virtual int TakeDamage(int armor,int damage){
         return armor-damage;
 
     }
